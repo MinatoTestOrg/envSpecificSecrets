@@ -16,4 +16,4 @@ jobs:
         echo ${{ secrets.env_secret1 }}
 
     - name: Comparing the environment specific secrets...
-      run: echo ${{ env.env_variable1 }}
+      run: echo ${{ vars.env_variable1 }}
