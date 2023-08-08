@@ -18,5 +18,5 @@ jobs:
     - name: Comparing the environment specific secrets...
       env:
         secret1: ${{ secrets.env_secret1 }}
-      if: env.secret == "Minato Namikaze"
+      if: env.secret == 'Minato Namikaze'
       run: echo "Same content"
