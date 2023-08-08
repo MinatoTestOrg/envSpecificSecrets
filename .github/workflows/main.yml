@@ -4,6 +4,7 @@ on: workflow_dispatch
 
 jobs:
   first-job:
+    environment: dev
     runs-on: ubuntu-latest
     steps:
     - name: Displaying the system config...
