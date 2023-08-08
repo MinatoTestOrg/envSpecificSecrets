@@ -1,0 +1,17 @@
+name: Main Runner
+
+on: workflow_dispatch
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Displaying the system config...
+      run: |
+        uname -a
+        ifconfig
+
+    - name: Using the environment specific secrets...
+      run: |
+        echo ${{ secrets.env_secret1 }}
+        echo ${{ variables.env_variable1 }}
