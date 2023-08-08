@@ -14,4 +14,12 @@ jobs:
     - name: Using the environment specific secrets...
       run: |
         echo ${{ secrets.env_secret1 }}
-        echo ${{ variables.env_variable1 }}
+
+    - name: Comparing the environment specific secrets...
+      run: |
+        if [ ${{ secrets.env_secret1 }} -eq "Minato Namikaze" ]
+        then
+          echo "Same content"
+        else
+          echo "Different contens"
+        fi
