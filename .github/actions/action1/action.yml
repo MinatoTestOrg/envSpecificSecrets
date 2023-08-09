@@ -1,0 +1,21 @@
+name: Action1
+description: action1
+
+inputs:
+  variable1:
+    default: "Sukumaran"
+    required: false
+
+runs:
+  using: "composite"
+
+  environment: dev
+
+  steps:
+  - name: Displaying variable1...
+    shell: bash
+    run: echo ${{ inputs.variable1 }}
+
+  - name: Displaying environment variable...
+    shell: bash
+    run: echo $${ vars.var1 }}
