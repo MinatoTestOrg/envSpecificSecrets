@@ -7,6 +7,9 @@ jobs:
     environment: dev
     runs-on: ubuntu-latest
     steps:
+    - name: Checking out the repo...
+      uses: actions/checkout@v3
+      
     - name: Displaying the system config...
       run: |
         uname -a
